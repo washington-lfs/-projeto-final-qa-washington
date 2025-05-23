@@ -1,4 +1,4 @@
-
+#teste de integração
 
 # Sistema de usuários simplificado
 usuarios = {}
