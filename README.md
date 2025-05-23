@@ -106,11 +106,15 @@ Escreva um parágrafo com sua reflexão pessoal, respondendo:
 O que você aprendeu de mais importante?
 
 
+eu aprendi o quão grande é a importancia dos teste na criação de softweres sem a QA seria muito dificil construir um sistema funcional 
+
 Como você enxerga a área de QA no seu futuro profissional?
+
+a QA com certeza estara comigo por toda a minha carreira proficional, principalmente na area de automação de ci/ci e devOps Automatizando tarefas como integração, testes, implementação e monitoramento, acelerando o ciclo de desenvolvimento.
 
 
 Qual ferramenta ou tema mais chamou sua atenção e por quê?
-
+a ferramenta weve que mostra todas as falhas dentro de um site, isso facilita na solução dos problemas, dentre outras extençoes do goole que eu achei muito legais como o katalon que ele grava por onde voce passa no site e voce pode fazer alterações automatizadas.
 
 
 
@@ -138,7 +142,7 @@ O login só funciona com a senha correta
 
 Os dados persistem entre as operações
 
-Bibliotecas
+Bibliotecas não foi utilizada
 
 Apenas Python puro (sem dependências)
 
@@ -151,24 +155,17 @@ teste 03 teste de regressão
 Objetivo
 Garantir que mudanças futuras na função formatar_texto() não quebrem comportamentos já existentes que outros sistemas podem depender.
 
-Bibliotecas
+Bibliotecas não foi utilizada
 
 Python puro (sem dependências)
 
-Poderia ser adaptado para usar pytest ou unittest
-
-Quando falha
-Se você modificar a função (ex: adicionar .title() no final), o teste alertará sobre a mudança inesperada:
-
-python
-# Modificação que causaria regressão
-def formatar_texto(texto):
-    return ' '.join(texto.split()).upper().title()  # OLÁ MUNDO → Olá Mundo
 Resultado esperado
-Saída para a versão correta:
 
 ✅ Todos os casos de teste passaram (sem regressões)
 o codigo roudou sem erro e com o resultado esperado
+
+
+
 
 
 
