@@ -114,7 +114,7 @@ Qual ferramenta ou tema mais chamou sua atenção e por quê?
 
 
 
-teste 01
+teste 01 teste unitario
 Objetivo
 Verificar se as funções básicas da calculadora (soma, subtracao, multiplicacao, divisao) funcionam corretamente, incluindo casos de uso típicos e edge cases (como divisão por zero).
 
@@ -128,8 +128,47 @@ As operações matemáticas retornam os valores corretos
 o resultado foi comforme o esperado, devolvel como resposta o "ok"
 
 
-teste 02
+teste 02 teste de integração
+Objetivo
+Verificar se:
 
+O cadastro impede usuários duplicados
+
+O login só funciona com a senha correta
+
+Os dados persistem entre as operações
+
+Bibliotecas
+
+Apenas Python puro (sem dependências)
+
+Resultado esperado
+Saída no console: ✅ Teste passou - Fluxo completo validado!
+rodou perfeitamente e deu o resultado esperado 
+
+
+teste 03 teste de regressão
+Objetivo
+Garantir que mudanças futuras na função formatar_texto() não quebrem comportamentos já existentes que outros sistemas podem depender.
+
+Bibliotecas
+
+Python puro (sem dependências)
+
+Poderia ser adaptado para usar pytest ou unittest
+
+Quando falha
+Se você modificar a função (ex: adicionar .title() no final), o teste alertará sobre a mudança inesperada:
+
+python
+# Modificação que causaria regressão
+def formatar_texto(texto):
+    return ' '.join(texto.split()).upper().title()  # OLÁ MUNDO → Olá Mundo
+Resultado esperado
+Saída para a versão correta:
+
+✅ Todos os casos de teste passaram (sem regressões)
+o codigo roudou sem erro e com o resultado esperado
 
 
 
