@@ -128,4 +128,8 @@ As operações matemáticas retornam os valores corretos
 o resultado foi comforme o esperado, devolvel como resposta o "ok"
 
 
+teste 02
+
+
+
 
