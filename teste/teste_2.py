@@ -1,43 +1,32 @@
 
-# Módulo de banco de dados simulado
-database = {}
 
-class Usuario:
-    def __init__(self, nome, email):
-        self.nome = nome
-        self.email = email
+# Sistema de usuários simplificado
+usuarios = {}
 
-class ServicoUsuario:
-    @staticmethod
-    def criar_usuario(nome, email):
-        if not email or '@' not in email:
-            raise ValueError("Email inválido!")
-        if email in database:
-            raise ValueError("Email já cadastrado!")
-        
-        novo_usuario = Usuario(nome, email)
-        database[email] = novo_usuario
-        return novo_usuario
+def cadastrar_usuario(nome, senha):
+    if nome in usuarios:
+        return False  # Usuário já existe
+    usuarios[nome] = senha
+    return True
 
-    @staticmethod
-    def buscar_usuario(email):
-        return database.get(email)
+def fazer_login(nome, senha):
+    return usuarios.get(nome) == senha
 
-# Teste de Integração
-def test_fluxo_completo_cadastro_usuario():
-    # 1. Criação de usuário
-    usuario = ServicoUsuario.criar_usuario("Ana Silva", "ana@exemplo.com")
+# Teste de integração
+def test_fluxo_login():
+    # 1. Cadastra um novo usuário
+    cadastro_ok = cadastrar_usuario("alice", "senha123")
+    assert cadastro_ok is True, "Cadastro falhou"
     
-    # 2. Verificação se o usuário foi persistido
-    usuario_recuperado = ServicoUsuario.buscar_usuario("ana@exemplo.com")
+    # 2. Testa login com credenciais corretas
+    login_ok = fazer_login("alice", "senha123")
+    assert login_ok is True, "Login válido falhou"
     
-    # 3. Asserts (verificações)
-    assert usuario_recuperado is not None, "Usuário não foi salvo no banco de dados"
-    assert usuario_recuperado.nome == "Ana Silva", "Nome do usuário incorreto"
-    assert usuario_recuperado.email == "ana@exemplo.com", "Email do usuário incorreto"
+    # 3. Testa login com senha errada
+    login_invalido = fazer_login("alice", "errada")
+    assert login_invalido is False, "Login inválido passou"
     
-    print("✅ Teste de integração passou com sucesso!")
+    print("✅ Teste passou - Fluxo completo validado!")
 
-# Executar o teste
-if __name__ == '__main__':
-    test_fluxo_completo_cadastro_usuario()
+# Executa
+test_fluxo_login()
