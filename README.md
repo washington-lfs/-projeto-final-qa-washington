@@ -1,9 +1,12 @@
 # -projeto-final-qa-washington
 1. Apresentação
 Nome completo
+
 Washington Luiz farias da silva junior
 
-Curso e semestre gti 5° semestre
+Curso e semestre
+
+gti 5° semestre
 
 
 Um parágrafo com uma breve descrição da sua experiência com a disciplina
@@ -109,6 +112,8 @@ Como você enxerga a área de QA no seu futuro profissional?
 Qual ferramenta ou tema mais chamou sua atenção e por quê?
 
 
+
+
 teste 01
 Objetivo
 Verificar se as funções básicas da calculadora (soma, subtracao, multiplicacao, divisao) funcionam corretamente, incluindo casos de uso típicos e edge cases (como divisão por zero).
@@ -120,6 +125,7 @@ unittest: Biblioteca padrão do Python para criação e execução de testes uni
 Todos os testes devem passar (OK), confirmando que:
 
 As operações matemáticas retornam os valores corretos
+o resultado foi comforme o esperado, devolvel como resposta o "ok"
 
 
 
